@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Select</title>
+    </head>
+    <body>
+        <main>
+            <!-- Opción 1 / Combobox clásico-->
+            <!-- Se usa en caso de tener pocas opciones -->
+
+            <!-- El valor de la etiqueta 'option' es lo que en realidad se recibe de la selección del usuario
+                Por defecto siempre se deja el mismo valor, pero pueden variar según la necesidad -->
+            <fieldset>
+                <legend>Opción 1</legend>
+                <select name="cursos" id="">
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="HTML5">HTML5</option>
+                    <option value="CSS3">CSS3</option>
+                    <option value="ReactJS">ReactJS</option>
+                </select>
+            </fieldset>
+
+            <!-- Opcion 2 / Combobox con Filtro-->
+            <!-- Se usa en caso de tener muchas opciones -->
+            <fieldset>
+                <legend>Opción 2</legend>
+                <input list="cursos" />
+                <datalist id="cursos">
+                    Aqui no se ponen texto en las opciones, ya que no será
+                    visible Basta con poner solo los valores en el value.
+                    <option value="JavaScript"></option>
+                    <option value="HTML5"></option>
+                    <option value="CSS3"></option>
+                    <option value="ReactJS"></option>
+                </datalist>
+            </fieldset>
+        </main>
+    </body>
+</html>

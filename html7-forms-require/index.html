@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FormsRequire</title>
+    </head>
+    <body>
+        <main>
+            <!-- Se puede agregar el atributo autcomplete en la etiqueta form -->
+            <!-- Si es 'on', permitimos que el formulario cargue respuestas ya registradas en ciertos campos del formulario -->
+            <!-- Si es 'off', bloqueamos cualquier tipo de autocompletado en el formulario, esto se hace en caso de que la aplicacion ya cuente
+            con un sistema de autocompletado integrado. -->
+            <form action="" autocomplete="on">
+                <label for="nombre">
+                    <span>¿Cuál es tu nombre?</span>
+                    <!-- El autocomplete recopila información del mismo campo que haya registrado el usuario sobre otros formularios. -->
+                    <!-- Existen distintos tipos de valores para el atributo autocomplete, que depende del tipo de información que maneje el campo (input) -->
+                    <!-- El required indica que ese campo debe rellenarse obligatoriamente -->
+                    <input
+                        type="text"
+                        name="nombre"
+                        id="nombre"
+                        autocomplete="name"
+                        required
+                    />
+                </label>
+                <label for="correo">
+                    <span>¿Cuál es tu correo electrónico?</span>
+                    <!-- El tipo email verifica si el campo cuenta con un '@' y un '.' -->
+                    <input
+                        type="email"
+                        name="correo"
+                        id="correo"
+                        autocomplete="email"
+                        required
+                    />
+                </label>
+                <label for="pais">
+                    <span>¿En qué país vives?</span>
+                    <input
+                        type="text"
+                        name="pais"
+                        id="pais"
+                        autocomplete="country"
+                        required
+                    />
+                </label>
+                <label for="cp">
+                    <span>¿Cuál es tu Código Postal?</span>
+                    <input
+                        type="text"
+                        name="cp"
+                        id="cp"
+                        autocomplete="postal-code"
+                        required
+                    />
+                </label>
+                <input type="submit" />
+            </form>
+        </main>
+    </body>
+</html>
